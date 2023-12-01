@@ -15,14 +15,11 @@ def calculate_sum_with_strings(lines):
     total_sum = 0
     for line in lines:
         newLine = replace_line(line)
-        print(line)
-        print(newLine)
         digits = [char for char in newLine if char.isdigit()]
         if len(digits) >= 1:
             first_digit = digits[0]
             last_digit = digits[-1]
             calibration_value = first_digit + last_digit
-            print("Calibration Value : ", calibration_value )
             total_sum += int(calibration_value)
                  
     return total_sum
